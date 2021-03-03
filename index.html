@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -18,7 +19,7 @@
 </head>
 
 <body>
-
+<!--Jumbotron Start-->
     <header class="jumbotron jumbotron-fluid">
 
         <div class="container">
@@ -32,12 +33,75 @@
                         <h2>a better way to camp</h2>
                     </div>
             
-
+                    <!--Reserve campsite button-->
                 <div class="col-md-4 col-xl-2 mt-4">
-                    <a class="btn btn-info" href=#reserveForm role="button">Reserve Campsite</a>
+                    <a class="btn btn-info" role="button" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
                 </div>
         </div>
     </header>
+<!--log in modal copy start-->
+    <div id="reserveModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg"  role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h3 class="modal-title">Reserve a Campsite</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <!--form start-->
+                        <form>
+                            <!--div class row 1 start -->
+                            <div class="row">
+                                <div class="col-sm-6"><!--div class col for label start-->
+                                <label >Number of Campers</label>
+                            </div> <!--div class col for label end-->
+   
+
+                            <div class="col form-group">
+                                <select name="numCampers" id="numCampers" class="form-control">
+                                    <option>Select...</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                 </select>
+                           </div>
+                </div> <!--div class row 1 end -->
+
+
+                <!--div class row 2 start -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <label for="date">Date</label>
+                        </div>
+                        <div class="col">
+                        <input type="id" name="date" placeholder="mm/dd/yyy" class="form-control">
+                        </div>
+                    </div>
+                </div>
+<!--div class row 2 end -->
+
+<!--div class row 3 start-->
+                
+    <!-- Blue search button and cancel starts here-->
+                    <button type="submit" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                
+<!--div class row 3 end-->
+                        
+                        </form>
+                        <!--form end-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--log in modal copy end-->
+
 <!--Nav bar start-->
 <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
 <div class="container">
@@ -107,7 +171,13 @@
     <!--carousel start-->
     <div class="row-content">
         <div class="col-md-8 mx-auto">
+            <!--carousel div start-->
             <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#homeCarousel" data-slide-to="1"></li>
+                    <li data-target="#homeCarousel" data-slide-to="2"></li>
+                </ol>
                 <div class="carousel-inner">
                     <!--carousel item 1: breadcrumb trail-->
                     <div class="carousel-item active">
@@ -134,6 +204,16 @@
                         </div>
                     </div>
                 </div>
+                <!--span element start-->
+                <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+                <!--span element end-->
             </div>
         </div>
     </div>
@@ -189,7 +269,7 @@
          </div>
     </div>
 
-<!--Task 2 starting div-->
+<!--reserve a campsite form-->
     <div class="row row-content"> 
         <div class="col-sm-6 mx-auto">
             <div class="card">
@@ -277,6 +357,7 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
 </body>
 
 </html>
