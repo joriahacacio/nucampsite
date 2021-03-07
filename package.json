@@ -3,15 +3,21 @@
   "version": "1.0.0",
   "description": "This is a website for the fictional campsites review site Nucamp",
   "main": "index.html",
-  "lite": "lite-server",
-  "start": "npm run lite",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lite": "lite-server",
+    "start": "npm run watch:all",
+    "scss": "node-sass -o css/ css/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "onchange 'css/*.scss' -- npm run scss",
+    "watch:all": "parallelshell 'npm run watch:scss' 'npm run lite'"
   },
   "author": "Joriah Acacio",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "node-sass": "^4.14.1",
+    "onchange": "^7.0.0",
+    "parallelshell": "3.0.1"
   },
   "dependencies": {
     "bootstrap": "^4.5.2",

@@ -74,7 +74,7 @@
 
 
                 <!--div class row 2 start -->
-                <!--date-->
+                <!--date start-->
                 <div class="form-group">
                     <div class="row">
                         <div class="col-sm-6">
@@ -85,13 +85,25 @@
                         </div>
                     </div>
                 </div>
-                <!--campsite type-->
-                <div class="form-group">
-                        <label class="col-form-label">Campsite Type</label>
-                        <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                <!--date end-->
 
-                        </div>
+                <!--campsite type start-->
+                <div class="form-group row">
+                    
+                        <label class="col-form-label col-sm-6">Campsite Type</label>
+                    
+                            <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                            <!--tent button-->
+                                <label class="btn btn-success">
+                                    <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
+                                </label>
+                              <!--rv button-->
+                                <label class="btn btn-primary">
+                                    <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off"> RV
+                                </label>
+                            </div>
                 </div>
+                <!--campsite type end-->
                 <!--div class row 2 end -->
 
 
@@ -223,6 +235,14 @@
                     <span class="sr-only">Next</span>
                 </a>
                 <!--span element end-->
+
+            
+                    <!--pause button-->
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <i class="fa fa-pause"></i>
+                    </button>
+                    <!--pause button-->
+
             </div>
         </div>
     </div>
@@ -370,6 +390,9 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    
+  <script src="js/scripts.js">
+ </script> 
     
 </body>
 
